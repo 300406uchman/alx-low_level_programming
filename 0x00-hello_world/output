@@ -1,0 +1,2 @@
+#!/bin/bash
+export output=4-puts.c && gcc 4-puts.c -o output 
