@@ -16,7 +16,7 @@ n = rand();
 lastdigit = n % 10;
 if (lastdigit > 5)
 {
-printf("Last digit of 98 is 8 and is greater than 5 \n");
+printf("Last digit of 98 is 8 and is greater than 5\n");
 }
 else if (lastdigit == 0)
 {
