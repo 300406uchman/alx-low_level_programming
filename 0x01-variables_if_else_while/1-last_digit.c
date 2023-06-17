@@ -12,7 +12,7 @@ int main(void)
 {
 int n, a;
 srand(time(0));
-n = rand();
+a = rand();
 n = a % 10;
 if (n > 5)
 {
