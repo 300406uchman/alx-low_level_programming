@@ -15,15 +15,15 @@ srand(time(0));
 int lastdigit = n % 10;
 if (lastdigit > 5)
 {
-printf("6 and is greater than 5 %d\n", lastdigit);
+printf("6 and is greater than 5 %d\n", n);
 }
 else if (lastdigit == 0)
 {
-printf("0 and is 0 %d\n", lastdigit);
+printf("0 and is 0 %d\n", n);
 }
 else
 {
-printf("3 and is less than 6 and not 0 %d\n", lastdigit);
+printf("3 and is less than 6 and not 0 %d\n", n);
 }
 return (0);
 }
