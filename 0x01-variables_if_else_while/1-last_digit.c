@@ -10,9 +10,10 @@
 
 int main(void)
 {
-int n,lastdigit;
+int n, lastdigit;
 srand(time(0));
- lastdigit = n % 10;
+n = rand();
+lastdigit = n % 10;
 if (lastdigit > 5)
 {
 printf("6 and is greater than 5 \n");
