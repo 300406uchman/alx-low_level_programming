@@ -10,15 +10,15 @@
 
 int main(void)
 {
-int n, lastdigit;
+int n, a;
 srand(time(0));
 n = rand();
-lastdigit = n % 10;
-if (lastdigit > 5)
+n = a % 10;
+if (n > 5)
 {
 printf("Last digit of 98 is 8 and is greater than 5\n");
 }
-else if (lastdigit == 0)
+else if (n == 0)
 {
 printf("Last digit of -98 is -8 and is less than 6 and not 0\n");
 }
