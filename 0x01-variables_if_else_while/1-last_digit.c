@@ -10,20 +10,20 @@
 
 int main(void)
 {
-int n;
+int n,lastdigit;
 srand(time(0));
-int lastdigit = n % 10;
+ lastdigit = n % 10;
 if (lastdigit > 5)
 {
-printf("6 and is greater than 5 %d\n", n);
+printf("6 and is greater than 5 \n");
 }
 else if (lastdigit == 0)
 {
-printf("0 and is 0 %d\n", n);
+printf("0 and is 0 \n");
 }
 else
 {
-printf("3 and is less than 6 and not 0 %d\n", n);
+printf("3 and is less than 6 and not 0 \n");
 }
 return (0);
 }
