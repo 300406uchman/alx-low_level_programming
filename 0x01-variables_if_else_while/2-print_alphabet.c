@@ -9,8 +9,8 @@ int main(void)
 char letter;
 for (letter = 'a'; letter <= 'z'; letter++)
 {
-printf("%c ", letter);
+putchar(letter);
 }
-printf("\n");
+putchar('\n');
 return (0);
 }
