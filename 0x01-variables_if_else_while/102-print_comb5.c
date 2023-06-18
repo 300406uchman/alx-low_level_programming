@@ -1,5 +1,11 @@
 #include <stdio.h>
-
+/**
+ *
+ * main -Entry point 
+ *
+ * Return: 0 (Success)
+ *
+ */
 int main(void)
 {
 int num1, num2;
