@@ -15,10 +15,10 @@ srand(time(0));
 n = rand();
 lastdigit = n % 10;
 if (lastdigit > 5)
-printf("Last digit of 98 is 8 and is greater than 5\n");
+printf("%d and is greater than 5\n", lastdigit);
 else if (lastdigit == 0)
-printf("Last digit of 980 is 0 and is 0\n");
+printf("%d and is 0\n", lastdigit);
 else
-printf("Last digit of -98 is -8 and is less than 6 and not 0\n");
+printf("%d and is less than 6 and not o\n", lastdigit);
 return (0);
 }
