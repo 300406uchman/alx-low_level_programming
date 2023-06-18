@@ -18,7 +18,7 @@ for (f = e + 1; f < 10; f++)
 putchar(i + '0');
 putchar(e + '0');
 putchar(f + '0');
-if (i != 8 && e != 9 || f != 9)
+if (i != 8 || e != 9 || f != 9)
 {
 putchar(',');
 putchar(' ');
