@@ -8,19 +8,15 @@
  */
 int main(void)
 {
-int i,e;
+int i, e;
 for (i = 0; i < 10; i++)
 {
-for (e = i + 1; e < 10; e++)
-{
 putchar(i + '0');
-putchar(e + '0');
 
-if (i !=9, e !=10)
+if (i != 9)
 {
 putchar(',');
 putchar(' ');
-}
 }
 }
 putchar('\n');
