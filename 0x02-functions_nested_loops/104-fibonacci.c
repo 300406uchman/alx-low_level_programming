@@ -24,7 +24,7 @@ for (i = 1; i < 91; i++)
 {
 printf(", %lu", aft);
 aft += bef;
-t - bef;
+t = bef;
 }
 bef1 = (bef / l);
 bef2 = (bef % l);
