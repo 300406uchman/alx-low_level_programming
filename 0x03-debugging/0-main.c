@@ -6,9 +6,11 @@
  */
 
 int main(void)
+
 {
 int i;
 i = 0;
 positive_or_negative(i);
+printf("98 is positive %d", i);
 return (0);
 }
