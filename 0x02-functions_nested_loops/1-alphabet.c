@@ -1,27 +1,26 @@
 #include "main.h"
-#include <stdio.h>
+#include "_putchar.h"
 
-/*
- * main - Entry point
- *
- * Return: 0 Success
- *
- */
+void print_alphabet(void);
 
-void print_alphabet(void)
+/**
+ ** main - check the code
+ **
+ ** Return: Always 0.
+ **/
+
+int main(void)
 {
-char letter = 'a';
-while (letter <= 'z')
-{
-putchar(letter);
-letter++;
-}
-putchar('\n');
+	    char letter;
+
+	        for (letter = 'a'; letter <= 'z'; letter++)
+			    {
+				            _putchar(letter);
+					        }
+
+		    _putchar('\n');
 }
 
-int main()
-{
-print_alphabet();
-return (0);
-}
+
+
 
