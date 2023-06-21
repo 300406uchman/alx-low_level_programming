@@ -1,24 +1,24 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
+#include <time.h>
 
 /**
- ** positive_or_negative(int i)- to determine the value of a number
- ** @i: the number to evakuate
- **/
-
+** positive_or_negative - Entry point
+** @i : integer
+** Return: Always 0 (Success)
+**/
 void positive_or_negative(int i)
 {
-if (i > 97)
+if (i > 0)
 {
-printf("%d is positive\n", i);
+printf("98 is positive\n");
 }
-else if (i < 0)
+else if (i == 0)
 {
-printf("%d is negative\n", i);
+printf("0 is zero\n");
 }
 else
 {
-printf("The number is zero\n");
+printf("-98 is negative\n");
 }
 }
-
