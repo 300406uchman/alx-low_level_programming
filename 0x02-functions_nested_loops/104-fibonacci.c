@@ -18,13 +18,11 @@ unsigned long int bef1;
 unsigned long int bef2;
 unsigned long int aft1;
 unsigned long int aft2;
-unsigned long int t;
 printf("%lu", bef);
 for (i = 1; i < 91; i++)
 {
 printf(", %lu", aft);
 aft += bef;
-t = bef;
 }
 bef1 = (bef / l);
 bef2 = (bef % l);
