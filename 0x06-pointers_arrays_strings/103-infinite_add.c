@@ -1,43 +1,74 @@
-#include "main.h"
-#include <string.h>
+   #include "main.h"
 
 /**
- * infinite_add - Adds two numbers.
- * @n1: The first number.
- * @n2: The second number.
- * @r: The buffer to store the result.
- * @size_r: The size of the buffer.
- *
- * Return: Pointer to the result or 0 if the result cannot be stored in r.
+ ** rev_string - reverse array
+ ** @n: integer params
+ ** Return: 0
+ **/
+
+void rev_string(char *n)
+{
+int i = 0;
+int j = 0;
+char temp;
+while (*(n + i) != '\0')
+{
+i++;
+}
+i--;
+for (j = 0; j < i; j++, i--)
+temp = *(n + j);
+*(n + j) = *(n + i);
+*(n + i) = temp;
+}
+
+/**
+ ** infinite_add - sum two integers
+ ** @n1: text presenting of the first added int
+ ** @n2: text presenting of the second
+ ** @r: pointer to buffer
+ ** @size_r: buffer size
+ ** Return: the calling function for pointer
  **/
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1, len2, max_len, sum, carry = 0, i, j, k;
-int left = 0;
-len1 = strlen(n1);
-len2 = strlen(n2);
-max_len = (len1 > len2) ? len1 : len2;
-if (max_len + 1 > size_r)
+int overflow = 0, i = 0, j = 0, digits = 0;
+int val1 = 0, val2 = 0, temp_tot = 0;
+while (*(n1 + i) != '\0')
+i++;
+while (*(n2 + j) != '\0')
+j++;
+i--;
+j--;
+if (j >= size_r || i >= size_r)
 return (0);
-r[max_len + 1] = '\0';
-for (i = len1 - 1, j = len2 - 1, k = max_len; k >= 0; i--, j--, k--)
+while (j >= 0 || i >= 0 || overflow == 1)
 {
-sum = carry;
-if (i >= 0)
-sum += n1[i] - '0';
-if (j >= 0)
-sum += n2[j] - '0';
-if (i >= 0 || j >= 0)
-left = sum / 10;
-r[k] = sum % 10 + '0';
-carry = left;
+if (i < 0)
+val1 = 0;
+else
+val1 = *(n1 + i)-'0';
+if (j < 0)
+val2 = 0;
+else
+val2 = *(n2 + j)-'0';
+temp_tot = val1 + val2 + overflow;
+if (temp_tot >= 10)
+overflow = 1;
+else
+overflow = 0;
+if (digits >= (size_r - 1))
+return (0);
+*(r + digits) = (temp_tot % 10) + '0';
+digits++;
+j--;
+i--;
 }
-if (carry)
-{
-for (i = max_len; i >= 0; i--)
-r[i + 1] = r[i];
-r[0] = carry + '0';
-}
+if (digits == size_r)
+return (0);
+*(r + digits) = '\0';
+rev_string(r);
 return (r);
 }
+
