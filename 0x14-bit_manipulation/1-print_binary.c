@@ -1,21 +1,27 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
- ** my_function - Brief description of what the function does.
+ ** print_binary - prints the binary equivalent of a decimal number
  ** @var1: Description of parameter 1.
  ** @var2: Description of parameter 2.
  **
  ** Return: Description of the return value.
  **/
-void my_function(int var1, int var2)
+void print_binary(unsigned long int n)
 {
-int my_variable = var1 + var2;
-if (my_variable > 0)
+int i, count = 0;
+unsigned long int current;
+for (i = 63; i >= 0; i--)
 {
-printf("Value is positive.\n");
+current = n >> i;
+if (current & 1)
+{
+_putchar('1');
+count++;
 }
-else
-{
-printf("Value is non-positive.\n");
+else if (count)
+_putchar('0');
 }
+if (!count)
+_putchar('0');
 }
