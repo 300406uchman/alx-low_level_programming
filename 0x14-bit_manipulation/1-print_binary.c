@@ -2,9 +2,7 @@
 #include "main.h"
 /**
  ** print_binary - prints the binary equivalent of a decimal number
- ** @var1: Description of parameter 1.
- ** @var2: Description of parameter 2.
- **
+ ** @n: Description of parameter n.
  ** Return: Description of the return value.
  **/
 void print_binary(unsigned long int n)
