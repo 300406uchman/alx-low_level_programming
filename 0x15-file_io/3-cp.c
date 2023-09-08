@@ -20,7 +20,8 @@ if (buffer == NULL)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", file);
-exit(99);												}
+exit(99);
+}
 return (buffer);
 }
 
@@ -83,9 +84,7 @@ exit(99);
 r = read(from, buffer, 1024);
 to = open(argv[2], O_WRONLY | O_APPEND);
 }
-while
-{
-(r > 0);
+while (r > 0);
 free(buffer);
 close_file(from);
 close_file(to);
